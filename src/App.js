@@ -37,10 +37,11 @@ return(
       </section>
       <section className="colors">
 
-      <SingleColour/>
-        {/* {list.map((color, index) => {
-          return
-        }) */}
+      {list.map((color, index) => {
+        console.log(color)
+        return <SingleColour key={index} {...color} index={index} />
+      })}
+        
       </section>
   </div>
 )

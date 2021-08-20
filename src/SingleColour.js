@@ -1,8 +1,8 @@
 import React from "react";
 
 
-const SingleColour = () => {
-    return <h3>Color</h3>
+const SingleColour = ({rgb, weight, index}) => {
+    return <h4>Single colour</h4>
 }
 
 
