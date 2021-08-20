@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Values from "values.js"
-
+import Values from "values.js";
 
 function App() {
   const [color, setColor] = useState();
@@ -11,13 +10,11 @@ function App() {
     event.preventDefault();
     try {
       let colors = new Values(color).all(10);
-    console.log(colors);
-    }
-    catch(error) {
+      console.log(colors);
+    } catch (error) {
       console.log(error);
-      setError(true)
+      setError(true);
     }
-    
   };
 
   return (
@@ -30,7 +27,7 @@ function App() {
             value={color}
             onChange={(e) => setColor(e.target.value)}
             placeholder="#f15025"
-            className = {`${error? 'error' : null}`}
+            className={`${error ? "error" : null}`}
           />
           <button className="btn">submit</button>
         </form>
