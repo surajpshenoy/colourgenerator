@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Values from "values.js";
+import SingleColour from "./SingleColour";
 
 
 function App() {
@@ -12,7 +13,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
   try {
     let colors = new Values(color).all(10);
-    console.log(colors);
+    setList(colors);
   } catch (error) {
     console.log(error);
     setError(true);
@@ -34,7 +35,13 @@ return(
           <button className="btn">submit</button>
         </form>
       </section>
-      <section className="colors"></section>
+      <section className="colors">
+
+      <SingleColour/>
+        {/* {list.map((color, index) => {
+          return
+        }) */}
+      </section>
   </div>
 )
 }
