@@ -38,7 +38,7 @@ return(
       <section className="colors">
 
       {list.map((color, index) => {
-        console.log(color)
+        //console.log(color)
         return <SingleColour key={index} {...color} index={index} />
       })}
         

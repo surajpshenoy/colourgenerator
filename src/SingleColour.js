@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 const SingleColour = ({rgb, weight, index}) => {
-    return <h4>Single colour</h4>
+
+    const [alert, setAlert] = useState(false);
+
+    const bcg = rgb.join(",");
+    console.log(bcg);
+    const style = {
+        backgroundColor: `rgb(${bcg})` 
+    }
+
+    return <article className="color" style={style}></article>
 }
 
 
