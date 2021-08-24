@@ -14,6 +14,7 @@ const handleSubmit = (event) => {
   try {
     let colors = new Values(color).all(10);
     setList(colors);
+    setError(false)
   } catch (error) {
     console.log(error);
     setError(true);
