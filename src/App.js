@@ -7,7 +7,7 @@ function App() {
 
 const [color, setColor] = useState();
 const [error, setError] = useState(false);
-const [list, setList] = useState([]);
+const [list, setList] = useState(new Values('#222').all(10));
 
 const handleSubmit = (event) => {
   event.preventDefault();
