@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const SingleColour = ({ rgb, weight, index, hexColor }) => {
   const [alert, setAlert] = useState(false);
@@ -10,6 +10,15 @@ const SingleColour = ({ rgb, weight, index, hexColor }) => {
   };
 
   const hexValue = `#${hexColor}`;
+
+  useEffect(()=> {
+  const timeOut = setTimeout(()=>{
+      setAlert(false)
+  }, 3000)
+  //Clearing out the previous timeout 
+  return ()=> clearTimeout(timeOut);
+  }, [alert]);
+
 
   return (
     <article
