@@ -39,7 +39,7 @@ return(
 
       {list.map((color, index) => {
         //console.log(color)
-        return <SingleColour key={index} {...color} index={index} />
+        return <SingleColour key={index} {...color} index={index} hexValue = {color.hex}/>
       })}
         
       </section>
